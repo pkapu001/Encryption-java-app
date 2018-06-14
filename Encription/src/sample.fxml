@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="294.0" minWidth="883.0" prefHeight="376.0" prefWidth="1200.0" style="-fx-min-width: 1200; -fx-min-height: 325; -fx-background-color: #000000; -fx-background-radius: 100;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler">
+   <children>
+      <AnchorPane fx:id="mainbox" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="294.0" minWidth="883.0" prefHeight="351.0" prefWidth="1200.0" style="-fx-background-color: #000000; -fx-min-width: 1200; -fx-min-height: 325; -fx-background-radius: 100;" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label layoutX="28.0" layoutY="55.0" text="Enter Text : " AnchorPane.leftAnchor="28.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="reset_b" alignment="CENTER" layoutX="887.0" layoutY="239.0" mnemonicParsing="false" onAction="#reset" style="-fx-text-fill: #FFFFFF; -fx-background-radius: 20;" stylesheets="@style.css" text="RESET" AnchorPane.rightAnchor="154.0">
+               <font>
+                  <Font name="Calibri Bold" size="31.0" />
+               </font>
+               <effect>
+                  <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <image>
+                        <Image url="@../r/reset.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <VBox layoutX="495.0" layoutY="31.0" prefHeight="169.0" prefWidth="167.0" spacing="3.0" stylesheets="@style.css" AnchorPane.rightAnchor="221.0">
+               <children>
+                  <RadioButton fx:id="er" mnemonicParsing="false" onAction="#er_action" prefHeight="17.0" prefWidth="125.0" style="-fx-border-width: 5;" stylesheets="@application.css" text="ENCRIPTION" textFill="#e1e1e1" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="g1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <AnchorPane fx:id="ebox" disable="true" prefHeight="150.0" prefWidth="167.0" visible="false">
+                     <children>
+                        <Label contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="7.0" layoutY="2.0" prefHeight="32.0" prefWidth="105.0" stylesheets="@application.css" text="NUMBER LETTER">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="60.0" layoutX="8.0" layoutY="33.0" prefHeight="32.0" prefWidth="105.0" stylesheets="@application.css" text="AT-BASH">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="8.0" layoutY="62.0" prefHeight="25.0" prefWidth="105.0" stylesheets="@style.css" text="CAESER">
+                           <graphic>
+                              <TextField fx:id="e_key_tb" onAction="#e_c_key_tb" prefHeight="25.0" prefWidth="40.0" promptText="KEY" style="-fx-background-radius: 10;" stylesheets="@style.css" />
+                           </graphic>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="e_c_b" alignment="CENTER" disable="true" layoutX="110.0" layoutY="77.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#e_c" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="CAESER" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="e_at_b" alignment="CENTER" disable="true" layoutX="109.0" layoutY="45.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#e_at" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="AT-B" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="e_nl_b" alignment="CENTER" disable="true" layoutX="109.0" layoutY="12.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#e_nl" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="N-L" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                        <Label contentDisplay="RIGHT" graphicTextGap="60.0" layoutX="7.0" layoutY="99.0" prefHeight="32.0" prefWidth="105.0" stylesheets="@application.css" text="MORSE-KEY">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="e_m_b" alignment="CENTER" disable="true" layoutX="109.0" layoutY="109.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#e_m" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="AT-B" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="662.0" layoutY="31.0" prefHeight="169.0" prefWidth="186.0" spacing="3.0" stylesheets="@style.css" AnchorPane.rightAnchor="35.0">
+               <children>
+                  <RadioButton fx:id="dr" focusTraversable="false" mnemonicParsing="false" onAction="#dr_action" prefHeight="17.0" prefWidth="125.0" style="-fx-border-width: 5;" stylesheets="@application.css" text="DECRIPTION" textFill="#e1e1e1" toggleGroup="$g1" underline="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <AnchorPane fx:id="dbox" disable="true" prefHeight="141.0" prefWidth="176.0" visible="false">
+                     <children>
+                        <Label contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="7.0" layoutY="2.0" prefHeight="32.0" prefWidth="105.0" stylesheets="@application.css" text="NUMBER LETTER">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="60.0" layoutX="8.0" layoutY="33.0" prefHeight="32.0" prefWidth="105.0" stylesheets="@application.css" text="AT-BASH">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="8.0" layoutY="62.0" prefHeight="25.0" prefWidth="105.0" stylesheets="@style.css" text="CAESER">
+                           <graphic>
+                              <TextField fx:id="d_key_tb" onAction="#d_c_key_tb" prefHeight="25.0" prefWidth="40.0" promptText="KEY" style="-fx-background-radius: 10;" stylesheets="@style.css" />
+                           </graphic>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="d_c_b" alignment="CENTER" disable="true" layoutX="110.0" layoutY="77.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#d_c" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="CAESER" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="d_at_b" alignment="CENTER" disable="true" layoutX="109.0" layoutY="46.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#d_at" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="AT-B" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="d_nl_b" alignment="CENTER" disable="true" layoutX="109.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#d_nl" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="N-L" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                        <Label contentDisplay="RIGHT" graphicTextGap="60.0" layoutX="7.0" layoutY="97.0" prefHeight="32.0" prefWidth="105.0" stylesheets="@application.css" text="MORSE-KEY">
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="d_m_b" alignment="CENTER" disable="true" layoutX="111.0" layoutY="108.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#d_m" prefHeight="25.0" prefWidth="55.0" style="-fx-background-radius: 10;" stylesheets="@application.css" text="AT-B" textAlignment="CENTER">
+                           <font>
+                              <Font name="AR CENA" size="10.0" />
+                           </font>
+                           <effect>
+                              <Reflection fraction="0.41" topOffset="0.65" topOpacity="0.73" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="104.0" prefHeight="278.0" prefWidth="682.0" spacing="30.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextArea fx:id="msg_tb" prefHeight="117.0" prefWidth="682.0" stylesheets="@style.css" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="n_msg_tb" editable="false" prefHeight="119.0" prefWidth="682.0" stylesheets="@style.css" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+               </padding>
+            </VBox>
+            <Label fx:id="error_tb" layoutX="58.0" layoutY="322.0" prefHeight="17.0" prefWidth="600.0" style="-fx-text-fill: #ff0000;" stylesheets="@style.css" text="aaa" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="542.0">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="73.0" fitWidth="40.0" layoutX="1129.0" layoutY="272.0" onMouseEntered="#open_info" onMouseExited="#close_info" onMouseMoved="#open_info" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="29.88607406616211" AnchorPane.rightAnchor="31.0">
+               <image>
+                  <Image url="@../r/i.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ibox" onMouseEntered="#open_info" onMouseExited="#close_info" onMouseMoved="#open_info" opacity="0.6" prefHeight="316.0" prefWidth="1155.0" style="-fx-background-color: #181818; -fx-background-radius: 60;" stylesheets="@style.css" visible="false" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="22.0">
+         <children>
+            <HBox fillHeight="false" layoutX="42.0" layoutY="21.0" prefHeight="65.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="193.0" AnchorPane.rightAnchor="513.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="128.0" text="NUMBER-LETTER  :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="42.0" layoutY="99.0" prefHeight="65.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="115.0" AnchorPane.rightAnchor="513.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="128.0" text="AT-BASH                :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator disable="true" layoutX="42.0" layoutY="122.0" opacity="0.35" prefHeight="3.0" prefWidth="500.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="613.0" AnchorPane.topAnchor="122.0" />
+            <Separator disable="true" layoutX="42.0" layoutY="200.0" opacity="0.35" prefHeight="0.0" prefWidth="500.0" />
+            <HBox layoutX="42.0" layoutY="166.0" prefHeight="111.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="513.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="128.0" text="CAESAR                 :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator disable="true" layoutX="642.0" layoutY="58.0" opacity="0.35" orientation="VERTICAL" prefHeight="237.0" prefWidth="0.0" />
+            <Label layoutX="674.0" layoutY="32.0" prefHeight="20.0" prefWidth="128.0" text="AT-BASH                :" AnchorPane.bottomAnchor="227.0" AnchorPane.rightAnchor="353.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="549.0" layoutY="7.0" prefHeight="49.0" prefWidth="125.0" text="INFO :">
+               <font>
+                  <Font name="Broadway" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="titlebar" alignment="BOTTOM_RIGHT" layoutX="103.0" layoutY="-88.0" onMouseDragged="#move" onMousePressed="#hold" onMouseReleased="#release" prefHeight="132.0" prefWidth="996.0" spacing="2.0" style="-fx-background-color: #101010; -fx-background-radius: 800;" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="101.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="889.0" text="ENCRIPTOR">
+               <font>
+                  <Font name="AR CENA" size="29.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../r/e.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Button fx:id="min" alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#min_action" prefHeight="44.0" prefWidth="36.0" style="-fx-background-color: none;" stylesheets="@style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../r/min.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="max" alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#max_action" prefHeight="44.0" prefWidth="36.0" style="-fx-background-color: none;" stylesheets="@style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="33.0" onMouseClicked="#max_action" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../r/max.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="close" alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#close_action" prefHeight="43.0" prefWidth="36.0" style="-fx-background-color: none;" stylesheets="@style.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#close_action" onMouseReleased="#close_action" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../r/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Region prefHeight="132.0" prefWidth="15.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

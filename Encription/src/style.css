@@ -1,0 +1,61 @@
+
+.root{
+	-fx-text-fill: #FFFFFF;
+	-fx-background-radius: 100;
+}
+
+
+.text-field{
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #181818;
+ }
+ 
+ .text-area{
+ 	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #181818;
+ }
+ .text-area .scroll-pane:fitToWidth .viewport{
+ 		-fx-text-fill: #FFFFFF;
+	-fx-background-color: #181818;
+ }
+ 
+ .text-area .scroll-pane:fitToWidth:fitToHeight .viewport .content{
+ 	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #181818;
+ 	
+ }
+ 
+ .text-area .scroll-pane:fitToWidth .viewport .content{
+ 	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #181818;
+ }
+ .label{
+ 	-fx-text-fill:#FFFFFF;
+ }
+ 
+ .button{
+ 	-fx-background-color: #303030;
+ 	-fx-text-fill: #FFFFFF;
+ }
+ 
+ .radio-button{
+ 		
+ 	
+ }
+ 
+ .radio-button .radio{
+ 	-fx-background-color: #000000;
+ 	-fx-border-color: #FFFFFF;
+ 	-fx-border-radius: 10;
+ 	-fx-border-width: 3;
+ }
+ 
+ 
+ .radio-button .radio .dot{
+ 	-fx-background-color: #000000;
+ }
+ .radio-button:selected .radio .dot{
+ 	-fx-background-color: #ffffff;
+ }
+ 
+ 
